@@ -1,0 +1,58 @@
+@media (max-width: 760px)
+    .toggle
+        display: block
+        background-image: url("../img/icon-hamburger.svg") 
+
+    .page-header.-mobile
+        box-sizing: border-box
+        position: fixed
+        width: 100%
+        height: 100%
+        top: 0px
+        background-color: rgba(37,43,70, 0.95)
+        transition: all 0.3s
+        
+    .header-nav
+        display: grid
+        grid-template-columns: max-content 1fr
+        grid-template-rows: 50px min-content 50px
+        grid-gap: 25px
+        justify-items: end
+        height: 100%
+        
+    .page-menu
+        display: none
+        grid-column: 1 / -1
+        flex-direction: column
+        margin-left: 0px
+        height: 100%
+        width: 100%
+        li
+            display: flex
+            justify-content: center
+            align-items: center
+            border-top: 1px solid rgba(255,255,255, 0.4)
+            padding: 20px 0px
+            width: 100%
+            height: 100%
+            letter-spacing: 3px
+            font-size: 22px
+        .btn.-secondary
+            border: 2.5px solid white
+            background: none
+            width: 100%
+
+        .social-links
+            display: inline-grid
+            grid-template-columns: max-content max-content
+            grid-column: 1 / -1
+            grid-gap: 50px
+            justify-content: center
+            align-items: center
+            height: max-content
+            width: 100%
+        
+        a
+            color: white
+        a:hover
+            color: $secondary

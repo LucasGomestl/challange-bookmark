@@ -1,0 +1,34 @@
+.-secondary
+    border: 2.5px solid $secondary
+    background-color: $secondary
+    &:hover
+        border: 2.5px solid $secondary
+        color: $secondary
+        background-color: white
+
+.-neutral
+    border: 2.5px solid hsl(0,0,96)
+    box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.20)
+    color: black
+    background-color: hsl(0,0,96)
+    &:hover
+        border: 2.5px solid $primary-neutral
+        background-color: white
+        color: black
+
+.-active
+    display: flex !important
+
+.-show
+    display: inline-grid !important
+
+.-open
+        background-image: url("../img/icon-close.svg")
+.-white
+    .circle, .word
+        fill: white
+    .flag
+        fill: rgba(37,43,70, 0.9)
+
+.addMargin
+    margin-top: 18vh

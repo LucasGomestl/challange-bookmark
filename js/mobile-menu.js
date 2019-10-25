@@ -1,0 +1,10 @@
+$(function(){
+    $('.toggle').click(function(){
+        $('.page-header').toggleClass('-mobile')
+        $('.page-menu').toggleClass('-active')
+        //$('.social-links').toggleClass('-show')
+        $('.svg').toggleClass('-white')
+        $('.toggle').toggleClass('-open')
+        $('.main-wrapper').toggleClass('addMargin')
+    })
+});
