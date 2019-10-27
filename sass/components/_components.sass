@@ -1,9 +1,11 @@
 .page-header
     padding-top: 6vh
-    margin-bottom: 8vh
+    margin-bottom: 15vh
     text-transform: uppercase
-    @media (max-width: 930px)
-        font-size: 0.85rem
+
+.logo-anchor
+    height: 25px
+    width: min-content
             
 .header-nav
     display: flex
@@ -16,6 +18,57 @@
     align-items: center
     flex-basis: 550px
     margin-left: 80px
+    font-size: 0.9rem
 
 .social-links
     display: none
+
+.page-intro
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-items: center
+    @media (max-width: 1100px)
+        grid-template-columns: 1fr
+        text-align: center
+        justify-items: center
+        >.hero-container
+            order: 0
+            margin: 20px 0px
+        >.intro-text
+            order: 1
+            margin: 80px 0px
+            
+        
+        
+
+.intro-text
+    display: grid
+    grid-gap: 25px
+    max-width: 600px
+    >.title
+        font-size: $bigger-size
+    @media (max-width: 1420px)
+        >.title
+            font-size: $big-size
+
+.buttons-container
+    .btn.-neutral
+        margin-left: 15px
+
+.hero-container
+    margin-left: 8vw
+    width: 100%
+    position: relative
+    z-index: -1
+    &::after
+        content: "";
+        position: absolute;
+        top: 25%;
+        bottom: -20px;
+        right: -150px;
+        left: 20%;
+        border-top-left-radius: 200px;
+        border-bottom-left-radius: 200px;
+        background-color: $primary
+        z-index: -1
+
