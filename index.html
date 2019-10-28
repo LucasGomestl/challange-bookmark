@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="js/mobile-menu.js"></script>
+    <script src="js/features.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <title>Bookmark</title>
@@ -69,17 +70,20 @@
 
         <!-- FEATURES -->
         <section class="features-component">
-            <h2 class="title">Features</h2>
-            <p class="text">
-                Our aim is to make it quick and easy for you to access your favourite websites.
-                Your bookmarks sync between you devices so you can access them on the go.
-            </p>
-            <nav class="tabs-component">
-                <ul class="tabs">
-                    <li><a href="#">Simple Bookmarking</a></li>
-                    <li><a href="#">Speedy Searching</a></li>
-                    <li><a href="#">Easy Sharing</a></li>
+            <div class="features-intro">
+                <h2 class="title">Features</h2>
+                <p class="text">
+                    Our aim is to make it quick and easy for you to access your favourite websites.
+                    Your bookmarks sync between you devices so you can access them on the go.
+                </p>
+            </div>
+            <nav class="tabs-nav">
+                <ul class="tabs-component">
+                    <li data-key="0">Simple Bookmarking</li>
+                    <li data-key="1">Speedy Searching</li>
+                    <li data-key="2">Easy Sharing</li>
                 </ul>
+                <div class="underline"></div>
             </nav>
             <div class="hero-container">
                 <img src="img/illustration-hero.svg" alt="" class="hero">
