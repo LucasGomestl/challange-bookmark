@@ -31,4 +31,23 @@
     text-transform: capitalize
     font-size: $big-size
 
+.navUnderline
+    position: absolute
+    height: 0px
+    width: 33.33%
+    bottom: -1px
+    left: 0%
+    transition: left .4s
+    border: 1.5px solid $secondary
+
+.underline
+    display: none
+    position: absolute
+    height: 0px
+    width: 33.33%
+    bottom: -1px
+    border: 1.5px solid $secondary
+    @media (min-width: 1100px)
+        visibility: hidden
+    
 
