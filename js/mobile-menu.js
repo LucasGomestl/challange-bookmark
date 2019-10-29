@@ -5,4 +5,13 @@ $(function(){
         $('.toggle').toggleClass('-open')
         $('.main-wrapper').toggleClass('-margin')
     })
+
+    $(window).on('resize', function(){
+        if(window.innerWidth > 830){
+            $('.page-header').removeClass('-mobile')
+            $('.svg').removeClass('-white')
+            $('.toggle').removeClass('-open')
+            $('.main-wrapper').removeClass('-margin')
+        }
+    });
 });
