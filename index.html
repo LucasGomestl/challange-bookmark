@@ -7,7 +7,7 @@
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="js/mobile-menu.js"></script>
     <script src="js/features.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lib/animate.css/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <title>Bookmark</title>
 </head>
@@ -79,7 +79,7 @@
             </div>
             <nav class="tabs-nav">
                 <ul class="tabs-component">
-                    <li data-key="0">Simple Bookmarking <div class="underline"></div></li>
+                    <li data-key="0" class="-active">Simple Bookmarking <div class="underline"></div></li>
                     <li data-key="1">Speedy Searching <div class="underline"></div></li>
                     <li data-key="2">Easy Sharing <div class="underline"></div></li>
                 </ul>
@@ -87,7 +87,7 @@
             </nav>
             <!-- features item 1-->
             <div data-key="0" class="features-content -show">
-                <div class="features-illustration-container">
+                <div class="features-illustration-container -slideIn">
                     <img src="img/illustration-features-tab-1.svg" alt="illustration" class="hero">
                 </div>
                 <div class="features-text">

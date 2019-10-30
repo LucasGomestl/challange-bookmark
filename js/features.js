@@ -1,58 +1,34 @@
 $(function(){
     const navUnderline = $('.navUnderline');
-    const button0 = $('.tabs-component>li[data-key=0]');
-    const button1 = $('.tabs-component>li[data-key=1]');
-    const button2 = $('.tabs-component>li[data-key=2]');
+    const tab = $('.tabs-component').children();
+    const featuresContent = $('.features-content');
+    const illustrations = featuresContent.children('.features-illustration-container');
 
-    const features0 = $('.features-content[data-key=0]')
-    const features1 = $('.features-content[data-key=1]')
-    const features2 = $('.features-content[data-key=2]')
 
-    button0.click(function(){
-        //Move the nav underline
-        navUnderline.css('left', '0%');
+    illustrations.addClass('animated slideInLeft');
+    illustrations.css('animation-duration', '.8s')
 
-        //Show selected content and hide others
-        features0.addClass('-show')
-        features1.removeClass('-show')
-        features2.removeClass('-show')
+    function transitions (selectedTab, selectedContent, navUnderlinePosition){
+        //Move the navUnderline that is only visible on desktop layout
+        navUnderline.css('left', navUnderlinePosition);
 
-        //Make the tab active and unselect others
-        $(button0.addClass('-active'))
-        $(button1.removeClass('-active'))
-        $(button2.removeClass('-active'))
-    
-    });
-    button1.click(function(){
-        navUnderline.css('left', '33.33%');
+        //On mobile layout, each tab has a border bottom. Only the selected one is visible
+        tab.map(tabItem => tab[tabItem].classList.remove('-active'));
+        selectedTab.classList.add('-active');
 
-        features1.addClass('-show')
-        features2.removeClass('-show')
-        features0.removeClass('-show')
-        
-        $(button1.addClass('-active'))
-        $(button2.removeClass('-active'))
-        $(button0.removeClass('-active'))
-        
-       
-    });
-    button2.click(function(){
-        
-        navUnderline.css('left', '66.66%');
+        //Hide all features contents and then show the selected one
+        featuresContent.map(feature => featuresContent[feature].classList.remove('-show'));
+        selectedContent.classList.add('-show');
+    }
 
-        features2.addClass('-show')
-        features0.removeClass('-show')
-        features1.removeClass('-show')
-    
-        $(button2.addClass('-active'))
-        $(button0.removeClass('-active'))
-        $(button1.removeClass('-active'))
-    
-    });
+    //Calls transitions function to each tab
+    tab[0].addEventListener('click', () => transitions(tab[0], featuresContent[0], '0%'));
+    tab[1].addEventListener('click', () => transitions(tab[1], featuresContent[1], '33.33%'));
+    tab[2].addEventListener('click', () => transitions(tab[2], featuresContent[2], '66.66%'));
 
-    //When the page is load, verify if the window width is less than 1100px
-    //if it is, the first button will be active
+    //When the page is load, verify if the window width is smaller than 1100px
+    //if true, the first tab will be active
     if(window.innerWidth < 1100){
-        $(button0.addClass('-active'))
+        $(tab[0].classList.add('-active'));
     }
 });
