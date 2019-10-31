@@ -252,4 +252,54 @@
         margin-bottom: 30px
         width: 86%
         
+.FAQ-component
+    //border: 1px solid #000
+    display: grid
+    justify-items: center
+    margin: 0 auto
+    max-width: 650px
+    >.title 
+        margin-bottom: 20px
+    >.text
+        max-width: 650px
+        text-align: center
+        margin-bottom: 35px
+
+.questions-list
+    display: grid
+    align-self: center
+    margin-bottom: 40px
+    width: 100%
+
+.question-component
+    display: grid
+    grid-template-columns: 1fr max-content
+    align-items: center
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.2)
+    min-height: 50px
+    cursor: pointer
+    //transition: height .1s 
+    >.question
+        display: flex
+        align-items: center
+        height: 50px
+        width: 100%
+        color: $secondary-neutral
+        font-weight: $medium
+        &:hover
+            color: $secondary
+    >.answer
+        display: none
+        grid-column: 1 / -1
+        margin-bottom: 20px
+        font-size: 1rem
+        line-height: 35px
+    >.icon
+        margin-right: 10px
+        cursor: pointer
+        transition: transform 0.4s
+    &:first-child
+        border-top: 1.5px solid rgba(0, 0, 0, 0.2)
+    
+        
 
