@@ -53,9 +53,10 @@
     max-width: 600px
     >.title
         font-size: $bigger-size
-    @media (max-width: 1420px)
-        >.title
+        @media (max-width: 1420px)
             font-size: $big-size
+        @media (max-width: 500px)
+            font-size: 1.8rem
 
 .buttons-container
     .btn.-neutral
@@ -81,7 +82,7 @@
 .features-component
     display: grid
     grid-template-columns: 1fr
-    margin-bottom: 25vh
+    margin-bottom: 20%
     @media (max-width: 1100px)
         grid-template-columns: 1fr
         justify-items: center
@@ -115,7 +116,6 @@
                 border-bottom: 1px solid #000
         .navUnderline
             display: none
-
 
 .features-intro
     display: grid
@@ -189,4 +189,67 @@
     >.btn
         width: min-content
 
+.download-extension
+    //border: 1px solid #000
+    display: grid
+    margin-bottom: 10vh
+    >.title
+        justify-self: center
+    >.text
+        justify-self: center
+        margin-top: 15px
+        max-width: 550px
+        text-align: center
+
+.extension-cards
+    display: grid
+    grid-template-columns: repeat(3, 22vw)
+    justify-content: space-around
+    margin-top: 6vh
+    align-items: start
+    //overflow: hidden
+    visibility: hidden
+    @media (max-width: 1230px)
+        grid-template-columns: 1fr
+        justify-items: center
+        >.card-component
+            max-width: 500px
+            margin-top: 50px
+
+.card-component
+    //border: 1px solid #000
+    box-sizing: border-box
+    display: grid
+    grid-template-columns: 1fr
+    justify-items: center
+    position: relative
+    border-radius: 20px
+    box-shadow: 0px 10px 40px -28px $secondary-neutral
+    padding: 0px 20px
+    width: 100%
+    background-color: white 
+    &:after
+            content: ""
+            position: absolute
+            display: block
+            height: 10px
+            width: 100%
+            bottom: 26%
+            background: url('../img/bg-dots.svg') repeat-x center center/contain
+
+    >.logoBrowser
+        margin-top: 40px
+        min-width: 35%
+    >.title
+        font-size: 26px
+        margin-top: 35px
+    >.subtitle
+        position: relative
+        margin-top: 15px
+        margin-bottom: 60px
+    >.btn
+        padding: 15px 15px
+        margin-bottom: 30px
+        width: 86%
+        
 
