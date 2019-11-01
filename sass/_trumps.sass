@@ -35,7 +35,10 @@
 .-active
     color: black !important
     .underline
-        display: inline-block !important
+        visibility: visible
+        width: 33.33%
+        @media (max-width: 890px)
+            width: 230px
 
 //Manage de features-content status
 .-show
