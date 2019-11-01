@@ -54,6 +54,8 @@
     border: 1.5px solid $secondary
     @media (min-width: 1100px)
         visibility: hidden
+    @media (max-width: 890px)
+        width: 230px
 
 .input
     box-sizing: border-box
@@ -78,3 +80,8 @@
     font:
         size: 13px
         style: italic
+
+.svgIcon
+    &:hover
+        path
+            fill: $secondary !important

@@ -2,9 +2,8 @@
     .toggle
         display: block
         background-image: url("../img/icon-hamburger.svg") 
-        z-index: 1
 
-    .page-menu
+    .header-menu
         display: none
 
     .page-header.-mobile
@@ -15,6 +14,7 @@
         top: 0px
         background-color: rgba(37,43,70, 0.95)
         transition: all .3s
+        z-index: 4
         
         .header-nav
             display: grid
@@ -29,7 +29,7 @@
             a:hover
                 color: $secondary
         
-        .page-menu
+        .header-menu
             display: flex
             grid-column: 1 / -1
             flex-direction: column
@@ -50,6 +50,8 @@
                 border: 2.5px solid white
                 background: none
                 width: 100%
+                font-weight: $regular
+                font-size: 1.5rem
 
         .social-links
             display: inline-grid
