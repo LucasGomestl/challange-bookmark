@@ -3,7 +3,7 @@ $(window).scroll(function () {
     const extensionCardsPos = $('.extension-cards').offset().top  - window.innerHeight + 100;
     
     if(extensionCardsPos < scrollPos){
-        $('.extension-cards').css('visibility', 'visible')
-        $('.extension-cards').children().addClass('animated fadeInDown')
+        $('.extension-cards').css('visibility', 'visible');
+        $('.extension-cards').children().addClass('animated fadeInDown');
     }
 });    

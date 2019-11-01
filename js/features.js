@@ -6,7 +6,7 @@ $(function(){
 
 
     illustrations.addClass('animated slideInLeft');
-    illustrations.css('animation-duration', '.8s')
+    illustrations.css('animation-duration', '.8s');
 
     function transitions (selectedTab, selectedContent, navUnderlinePosition){
         //Move the navUnderline that is only visible on desktop layout

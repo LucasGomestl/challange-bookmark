@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="js/mobile-menu.js"></script>
     <script src="js/features.js"></script>
     <script src="js/cards.js"></script>
     <script src="js/faq-accordion.js"></script>
+    <script src="js/formValidation.js"></script>
     <link rel="stylesheet" href="lib/animate.css/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="icon" href="img/favicon-32x32.png">
     <title>Bookmark</title>
 </head>
 <body>
@@ -218,12 +221,23 @@
 
         <!-- CONTACT-US -->
         <section class="contact-us">
-            <span class="subtitle">35,000 + Already Joined</span>
-            <h2 class='title'>Stay up-to-date with what we're doing</h2>
-            <form class="email-form" action="">
-                <input type="text" class="input" name="email" placeholder="Enter your email address">
-                <button class="btn">Contact Us</button>        
-            </form>
+            <div class="contact-container">
+                
+                <span class="subtitle">35,000 + Already Joined</span>
+                <h2 class='title'>Stay up-to-date with what we're doing</h2>
+                <form class="email-form" action="#">
+                    <input type="text" 
+                           class="input" 
+                           name="email" 
+                           placeholder="Enter your email address" 
+                           aria-label="Button submit email"
+                    >
+                    <img class="iconError" src="img/icon-error.svg" alt="icon error" >
+                    <button class="submit btn" aria-label="Button submit email" type="submit">Contact Us</button>
+                    <span class="feedback"></span>
+                </form>
+                
+            </div>
         </section>
         <!-- /CONTACT-US -->
     </main>

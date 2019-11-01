@@ -300,6 +300,62 @@
         transition: transform 0.4s
     &:first-child
         border-top: 1.5px solid rgba(0, 0, 0, 0.2)
-    
+
+.contact-us 
+    display: grid
+    grid-template-columns: 1fr
+    justify-items: center
+    margin: 50px -10vw
+    padding: 5vh 10vw
+    color: white
+    background-color: $primary
+
+.contact-container
+    display: grid
+    justify-items: center
+    max-width: 500px
+    color: white
+    >.subtitle
+        margin-bottom: 4vh
+    >.title
+        margin-bottom: 4vh
+        text-align: center
+        text-transform:
+        color: white
+        font-weight: 500
+        @media (max-width: 550px)
+            font-size: 1.8rem
+        @media (max-width: 496px)
+            font-size: 1.5rem
+            
         
+.email-form
+    box-sizing: border-box
+    display: grid
+    grid-template-columns: 1fr 18px max-content
+    grid-template-rows: 44px
+    align-items: center
+    padding: 0 15px
+    height: 100%
+    width: 100%
+    @media (max-width: 550px)
+        grid-template-columns: 1fr 20px
+        >.input
+            grid-column: 1/-1
+            grid-row: 1
+        >.feedback
+            grid-column: 1/-1
+        >.iconError
+            grid-column: 2
+            grid-row: 1
+            margin-left: -15px
+            padding: 5px
+        >.submit
+            order: 1
+            grid-column: 1/-1
+            margin-top: 20px
+
+    >.submit
+        @extend .-secondary
+        max-width: 100%
 
