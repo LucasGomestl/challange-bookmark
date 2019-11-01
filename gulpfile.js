@@ -21,7 +21,7 @@ function style(){
 function scripts(){
     return new Promise(function(resolve, reject){
         gulp.src('./js/**.js')
-        .pipe(concat('scripts.js'))
+        .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./bundle'))
         resolve();
