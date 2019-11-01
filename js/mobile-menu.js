@@ -4,7 +4,7 @@ $(function(){
         $('.svg').toggleClass('-white');
         $('.toggle').toggleClass('-open');
         $('.main-wrapper').toggleClass('-margin');
-    })
+    });
 
     $(window).on('resize', function(){
         if(window.innerWidth > 830){

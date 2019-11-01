@@ -2,7 +2,10 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var uglify = require('gulp-minify')
+var concat = require('gulp-concat')
 var browserSync = require('browser-sync');
+
 
 function style(){ 
     return new Promise(function(resolve, reject){
@@ -11,6 +14,16 @@ function style(){
         .on('error', sass.logError)
         .pipe(gulp.dest('css'))
         .pipe(browserSync.stream())
+        resolve();
+    });
+}
+
+function scripts(){
+    return new Promise(function(resolve, reject){
+        gulp.src('./js/**/*.js')
+        .pipe(concat('scripts.js', {newLine: ';'}))
+        .pipe(uglify())
+        .pipe(gulp.dest('./js/bundle'))
         resolve();
     });
 }
@@ -26,4 +39,5 @@ function watch(){
     gulp.watch('./**/*.js').on('change', browserSync.reload);
 }
 
+gulp.task('scripts', scripts);
 gulp.task('default', gulp.series(style, watch));
