@@ -20,10 +20,10 @@ function style(){
 
 function scripts(){
     return new Promise(function(resolve, reject){
-        gulp.src('./js/**/*.js')
-        .pipe(concat('scripts.js', {newLine: ';'}))
+        gulp.src('./js/**.js')
+        .pipe(concat('scripts.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./js/bundle'))
+        .pipe(gulp.dest('./bundle'))
         resolve();
     });
 }

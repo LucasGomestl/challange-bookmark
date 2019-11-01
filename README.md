@@ -40,4 +40,6 @@ and start the app:
 gulp
 ```
 
+If you just want to see it running, <a href="https://lucasgomestl.github.io/challange-bookmark/" target="_blank">click here</a>
+
 That’s it! 🎉
